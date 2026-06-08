@@ -1,0 +1,68 @@
+{
+  "": {
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/primary.swiftdeps"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/AppDelegate.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate.dia"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryGuardApp.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp.dia"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryMonitor.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor.dia"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryThresholdSlider.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider.dia"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MenuBarView.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView.dia"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/NotificationManager.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager.dia"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/TerminationSettings.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings.dia"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/TerminationSettingsView.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView.dia"
+  },
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/main.swift": {
+    "dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main.d",
+    "object": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main.swift.o",
+    "swiftmodule": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main.swiftdeps",
+    "diagnostics": "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main.dia"
+  }
+}

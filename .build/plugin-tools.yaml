@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "MemoryGuard-arm64-apple-macosx-debug.exe": ["<MemoryGuard-arm64-apple-macosx-debug.exe>"]
+  "MemoryGuard-arm64-apple-macosx-debug.module": ["<MemoryGuard-arm64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<MemoryGuard-arm64-apple-macosx-debug.exe>","<MemoryGuard-arm64-apple-macosx-debug.module>"]
+  "test": ["<MemoryGuard-arm64-apple-macosx-debug.exe>","<MemoryGuard-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard":
+    is-mutated: true
+commands:
+  "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard-entitlement.plist"]
+    description: "Write auxiliary file /Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard-entitlement.plist"
+
+  "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/AppDelegate.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryGuardApp.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryMonitor.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryThresholdSlider.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MenuBarView.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/NotificationManager.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/TerminationSettings.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/TerminationSettingsView.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/main.swift"]
+    outputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/sources"]
+    description: "Write auxiliary file /Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/sources"
+
+  "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main.swift.o"]
+    outputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.product/Objects.LinkFileList"
+
+  "/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<MemoryGuard-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<MemoryGuard-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<MemoryGuard-arm64-apple-macosx-debug.exe>"]
+
+  "<MemoryGuard-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/Modules/MemoryGuard.swiftmodule"]
+    outputs: ["<MemoryGuard-arm64-apple-macosx-debug.module>"]
+
+  "C.MemoryGuard-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.product/Objects.LinkFileList"]
+    outputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/MemoryGuard"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug","-o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard","-module-name","MemoryGuard","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_MemoryGuard_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/Modules/MemoryGuard.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.MemoryGuard-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard-entitlement.plist"]
+    outputs: ["<MemoryGuard-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/MemoryGuard"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard-entitlement.plist","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard"]
+
+  "C.MemoryGuard-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/AppDelegate.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryGuardApp.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryMonitor.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MemoryThresholdSlider.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/MenuBarView.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/NotificationManager.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/TerminationSettings.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/TerminationSettingsView.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/main.swift","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/sources"]
+    outputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/AppDelegate.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryGuardApp.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryMonitor.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MemoryThresholdSlider.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/MenuBarView.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/NotificationManager.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettings.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/TerminationSettingsView.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/main.swift.o","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/Modules/MemoryGuard.swiftmodule"]
+    description: "Compiling Swift Module 'MemoryGuard' (9 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","MemoryGuard","-emit-dependencies","-emit-module","-emit-module-path","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/Modules/MemoryGuard.swiftmodule","-output-file-map","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/output-file-map.json","-incremental","-c","@/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/MemoryGuard.build/sources","-I","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j18","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/seolgyuhan/Desktop/MemoryGuard/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","MemoryGuard_main","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","memoryguard"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/seolgyuhan/Desktop/MemoryGuard/Sources/MemoryGuard/","/Users/seolgyuhan/Desktop/MemoryGuard/Package.swift","/Users/seolgyuhan/Desktop/MemoryGuard/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
